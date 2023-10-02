@@ -5,11 +5,29 @@ body {
     Find a web safe font you like, and add it 
     to your card.
     */
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .avatar {
-    width: 150px;
+    width: 130px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 90px;
+    border-bottom-left-radius: 60px;
+    border: 5px solid #f4f1bb;
+    filter: drop-shadow(10px 5px 20px #f4f1bb);
+    transition: transform 1s;
+}
+
+
+.avatar:hover {
+  transform: scale(1.1);
+  transition: transform 1s;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 1.5em;
 }
 
 .card {
@@ -19,19 +37,27 @@ body {
     display: flex;
     justify-content: space-around;
     text-align: center;
-    background: #ddebf8;
-    color: #2b2839;
-    border-bottom: 6px solid #d8cefe;
-        
-    /*
-    Challenge:
-    Find a color palette you like on Coolors.co
-    and use it in your business card.
-     */
+    align-items: center;
+    background: #ed6a5a;
+    color: #f4f1bb;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 90px;
+    border-bottom-left-radius: 60px;
+    border-bottom: 6px solid #5d576b;
 }
 
-.border-blue {
-    border: 1px dotted blue;
+.card:hover {
+    animation-name: colorEffect;
+    animation-duration: 2s;
+}
+
+
+@keyframes colorEffect {
+  0%   {background-color: #5d576b;}
+  25%  {background-color: #e9c46a;}
+  50%  {background-color: #f4a261;}
+  100% {background-color: #eb5e28;}
 }
 
 /*
@@ -46,8 +72,3 @@ the design of your business card, e.g.:
 - animations     🤯🤯🤯
 */
 
-/*
-Final challenge:
-Download the code to your local computer and place it
-in a folder called "business-card"
-*/
